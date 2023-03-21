@@ -28,6 +28,9 @@ In other words, a Shader is a set of computer instructions (computer program) th
 
 ### Fractal Flow Noise Shader 
 
+* FractalFlowNoiseFilter.swift
+* fractalFlowNoise.metal
+
 The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow Noise Shader. This Shader is a fractal sum of a given base image. What this means is that it takes a basic image file, makes many copies of it, some zoomed, some rotated, and blends them together. The blending is not uniform, however. The images that are zoomed smaller (having a higher frequency) will be blended with a lighter weight.  
 
 <img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
@@ -35,9 +38,6 @@ The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow 
 We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that are able to simulate some natural phenomenon such as flame and gas.
 
 #### Fractal Sum
-
-* FractalFlowNoiseFilter.swift
-* fractalFlowNoise.metal
 
 This main work is performed in the 'turbulance_p' function. If you look at it closely, you will notice a loop that makes 24 copies of the image
 
