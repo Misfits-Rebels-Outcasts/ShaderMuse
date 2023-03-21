@@ -4,9 +4,11 @@ Shader Muse explores the fun from mixing/chaining to Digital Compositing of Phot
 
 For example, we explore the fun of mixing this Image 
 
-<img src=documentation/Malacca.JPG width="50%" height="50%">
+<img src=documentation/Malacca.JPG width="84%" height="84%">
 
 with this Shader (Fractal Flow Noise)
+
+<img src=documentation/FractalFlowNoise.JPG width="84%" height="84%">
 
 to get this Photo Fire Effects Video.
 
