@@ -16,9 +16,9 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 
 ## Fire Flame Shader Photo Effect 
 
-To create the Photo Fire Effect we first create a "fire like" Shader and use a mask make the "fire" appear natural on our image. For the mask, we compute a Difference of Gaussians of the grayscale image to product a sketch effect that is further used as the mask to create the effect of edges on the image catching fire.
+To create the Photo Fire Effect, we first create a "fire like" Shader and use a mask make the "fire" appear natural on our image. For the mask, we compute a Difference of Gaussians of the grayscale image to product a sketch effect that is further used as the mask to create the effect of edges on the image catching fire.
 
-We need to chain several filters to create the mask and also a blend with mask filter to put everything together. Our open source project Shader Muse uses Swift, Core Image CIFilter, and Apple Metal Shader to achieve all this.
+We need to chain several filters to create the mask and a blend with mask filter to put everything together. Our open-source project Shader Muse uses Swift, Core Image CIFilter, and Apple Metal Shader to achieve all this.
 
 #### What is a Shader?
 
@@ -55,7 +55,7 @@ val = amplitude * sample(pos) + amplitude * 1/1.5 * sample(pos*1.4)  + amplitude
 Note : The val (float3) is not just a single value. It is a 3D vector that represents the sampled value of each of the components Red, Green , Blue of the final color that is returned 
 
 Note : To zoom out the image, we simply multiply the sampling coordinates by 1.4 for each iteration.
-So if we originally sample at the uv coordinates 0.0 to 1.0, the next iteration will be sampled at 0.0 to 1.4
+So, if we originally sample at the uv coordinates 0.0 to 1.0, the next iteration will be sampled at 0.0 to 1.4
 
 #### Animation
 
@@ -82,7 +82,7 @@ Example: for pdf1 and pdf2 functions
 float val = abs(atan(p.y*0.9543))*(cos(p.x*0.9532)+sinh(p.y*0.9816));
 float val = length(p)*(cos(p.y/p.x*0.9532)+sinh(p.y*0.9816));
 
-The original implementation of these probability distribution functions are based approximately on polar coordinates with the length and arctangent functions.  The actual implementation makes modifications to them largely by trial and error. The main intent is for these functions to be periodic , so you will notice the presence of sinusoidal and hyperbolic functions. To generate an interesting animation, these functions and their parameters are arbitrarily selected, and the reader may want to experiment by plugging different types of functions and parameters values to 'engineer' some other variations.
+The original implementation of these probability distribution functions is based approximately on polar coordinates with the length and arctangent functions.  The actual implementation makes modifications to them largely by trial and error. The main intent is for these functions to be periodic , so you will notice the presence of sinusoidal and hyperbolic functions. To generate an interesting animation, these functions and their parameters are arbitrarily selected, and the reader may want to experiment by plugging different types of functions and parameters values to 'engineer' some other variations.
 
 ### Difference of Gaussian Sketch Mask
 
@@ -146,7 +146,7 @@ The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoi
 
 ## Why use Digital Compositing on Shaders?
 
-It is possible to develop a Metal Shader to generate the entire Fire Shader Photo Effect above. But instead, we have chosen to apply Digital Compositing concepts and created a node graph of CIFilter with a very basic Metal Shader to achieve the same thing. 
+It is possible to develop a Metal Shader to generate the entire Fire Shader Photo Effect above. But instead, we have chosen to apply Digital Compositing concepts and created a node graph of CIFilter with a considerably basic Metal Shader to achieve the same thing. 
 
 The advantage of doing this is we have surfaced many of the programming steps to something controllable by a user. For example, a graphics designer using an app that uses our Digital Compositing Shader node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.
 
@@ -156,7 +156,7 @@ Digital Compositing (node-based) is the process of combining multiple seemingly 
 
 ## Digital Compositing Pipeline - Beyond a Node Graph
 
-We can also express the node graph above succintly in English as a list of steps with a Digital Compositing Pipline below. 
+We can also express the node graph above succinctly in English as a list of steps with a Digital Compositing Pipeline below. 
 
 0. Original Image (none)
 1. Photo Effect Noir (0)
@@ -167,9 +167,7 @@ We can also express the node graph above succintly in English as a list of steps
 6. Fractal Flow Noise (none)
 7. Blend With Mask (input - 0, background - 6, mask - 5)
 
-We can read the above as below:
-
-We apply a Photo Effect Noir filter on the original image and then chain the output to a Color Invert. The (0) refers to the input image used by the Photo Effect Noir filter. In steps 3 and 4, we create Gaussian Blurs on the output of Color Invert. The (2) refers to the input image used by both of the Gaussian Blurs. The steps 3, 4, and 5 simply compute the Difference of Gaussians of the grayscale image to product a sketch effect that is further used as a mask to create the effects of edges catching fire. Finally we apply a Color Dodge Blend on the two Gaussian Blur to create our mask 
+The (0) in step 1 refers to the input image used by the Photo Effect Noir filter. Steps 3, 4, and 5 compute the Difference of Gaussians of the grayscale image to produce a sketch effect that is further used as a mask to create the effects of edges catching fire. 
 
 ## Why use a Digital Compositing Pipeline?
 
@@ -190,7 +188,7 @@ https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
 <img src=documentation/FirePreset.jpeg width="40%" height="40%">
 
 2. Tap on the "f" button.
-3. Add a "FBM Noise" Shader.
+3. Add an "FBM Noise" Shader.
 4. Add a "Mix" Composite Filter.
 5. Tap on the "Mix" node, change the Background to "7".
 
