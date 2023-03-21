@@ -56,7 +56,7 @@ A Gaussian Difference Mask is a "difference of Gaussians (DoG) is a feature enha
 
 This mask "can be utilized to increase the visibility of edges and other detail present in a digital image. A wide variety of alternative edge sharpening filters operate by enhancing high frequency detail, but because random noise also has a high spatial frequency, many of these sharpening filters tend to enhance noise, which can be an undesirable artifact. The difference of Gaussians algorithm removes high frequency detail that often includes random noise, rendering this approach one of the most suitable for processing images with a high degree of noise." (Wikipedia https://en.wikipedia.org/wiki/Difference_of_Gaussians)
 
-## Digital Compositing Node Graph
+### Node Graph
 
 We can also use a Digital Compositing Node Graph with Core Image CIFilter names to illustrate what we are doing above:
 
@@ -81,11 +81,36 @@ This gives us a mask for our Fire Effect as shown below:
 We can use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
 
 Gaussian Blur Radius - 14.88 (or 5.18)
+
 Gaussian Blur Radius - 4.63
 
+## Fire Shader Effect 
+
+     Original Image    
+     |                |           
+     |                V           
+     |                CIPhotoEffectNoir    
+     |                |           
+     |                V           
+     |                CIColorInvert    
+     |                |               |     
+     |                V               V     
+     |                CIGaussianBlur  CIGaussianBlur
+     |                |               |     
+     |                V               V     
+     |                CIColorDodgeBlend    CIFractalFlowNoise
+     |                |                    |     
+     V                V                    V     
+     CIBlendWithMask (input - Original Image, background - CIFractalFlowNoise, mask - CIColorDodgeBlend) 
+               
+                
 ### What is Digital Compositing?
 
 Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the final outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
+
+### Why Digital Compositing?
+
+In our chaining and mixing of Shaders and Filters above, ...
 
 ### What is Digital Compositing Pipeline?
 
@@ -97,8 +122,6 @@ We can also express the Node Graph succintly in English using a simple list belo
 3. Gaussian Blur (2)
 4. Gaussian Blur (2)
 5. Color Dodge Blend (3,4)
-
-### Explanation
 
 We apply a Photo Effect Noir filter on the original image and then chain the output to a Color Invert. In Step 3-4, we create Gaussian Blur based on the output of the Color Invert. The (2) refers to the input image used by both of the Gaussian Blur. Finally we apply a Color Dodge Blend on the two Gaussian Blur to achieve the Gaussian Difference Mask. 
 
