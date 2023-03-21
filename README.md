@@ -154,9 +154,9 @@ The advantage of doing this is we have surfaced many of the programming steps to
 
 Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the final outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
 
-## Digital Compositing Pipeline - Beyond a Node Graph
+## Beyond a Node Graph
 
-We can also express the node graph above succinctly in English as a list of steps with a Digital Compositing Pipeline below. 
+We can also express the node graph above succinctly in English as a list of steps.
 
 0. Original Image (none)
 1. Photo Effect Noir (0)
@@ -171,9 +171,9 @@ The (0) in step 1 refers to the input image used by the Photo Effect Noir filter
 
 ## Why use a Digital Compositing Pipeline?
 
-Find out more on Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md)
+Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. More information is available at Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md).
 
-For one, we can express our Digital Compositing Pipeline as a simple list:
+Shader Muse has forked the [Nodef project](https://github.com/Misfits-Rebels-Outcasts) to enable Digital Compositing of Shaders and Filters in iOS.
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
@@ -181,26 +181,29 @@ Check out the compiled app of Shader Muse - Pipeline - at the following:
 
 https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
 
-## Adding Smoke to Fire
+## Adding Smoke to Fire Effects
 
-1. In the Presets of the app, tap on the FIRE preset to apply what we have described above to our photo.
+1. Download and run the Pipeline app - https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
+2. In the Presets of the app, tap on the FIRE preset to apply the Fire Effect.
 
 <img src=documentation/FirePreset.jpeg width="40%" height="40%">
 
-2. Tap on the "f" button.
-3. Add an "FBM Noise" Shader.
-4. Add a "Mix" Composite Filter.
-5. Tap on the "Mix" node, change the Background to "7".
+3. Tap on the "f" button to view the Digital Compositing Pipeline of our Fire Effect.
+4. We can further enhance this effect by adding smoke: "FBM Noise" Shader.
+4. Next add a "Mix" Composite Filter to mix our Fire Effects with the "FBM Noise".
+5. Tap on the "Mix" node and change the Background to "7".
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
-# List of Metal Shaders  
+You can also adjust the intensity of the Fire Effect by tapping on the Gaussian Blur nodes and changing the Radius.
+
+# List of Metal Shaders in Shader Muse 
 
 * FBM Noise - based on 2D Noise by Morgan Mcguire @morgan3d
 * [Fractal Flow Noise Shader](documentation/FractalFlowNoiseShader.md)
 * Particles
 
-and over 150 CIFilter for Digital Compositing
+and over 150 CIFilter for Digital Compositing. Please star our project, we will definitely add more Shaders with your encouragement.
 
 # Open-Source Project (GPLv2)
 
