@@ -35,7 +35,7 @@ The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow 
 
 <img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
 
-We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that are able to simulate some natural phenomenon such as flame and gas.
+We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that can simulate some natural phenomenon such as flame and gas.
 
 #### Fractal Sum
 
@@ -48,7 +48,7 @@ For each iteration, the image is zoomed out by 1.4, while the weight is reduced 
 amplitude *= 1.5; //weight
 pos *= 1.4; //scale
 
-So the final sum is something like a series as below
+So, the final sum is something like a series as below
 
 val = amplitude * sample(pos) + amplitude * 1/1.5 * sample(pos*1.4)  + amplitude * 1/1.5 * 1/1.5 * sample(pos*1.4*1.4)  + ....
 
@@ -152,7 +152,7 @@ The advantage of doing this is we have surfaced many of the programming steps to
 
 ### Just in case, what is Digital Compositing?
 
-Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the final outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
+Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
 
 ## Beyond a Node Graph
 
@@ -203,7 +203,7 @@ You can also adjust the intensity of the Fire Effect by tapping on the Gaussian 
 * [Fractal Flow Noise Shader](documentation/FractalFlowNoiseShader.md)
 * Particles
 
-and over 150 CIFilter for Digital Compositing. Please star our project, we will definitely add more Shaders with your encouragement.
+and over 150 CIFilter for Digital Compositing. Please star our project, we will add more Shaders with your encouragement.
 
 # Open-Source Project (GPLv2)
 
