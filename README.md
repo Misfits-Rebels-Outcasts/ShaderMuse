@@ -44,7 +44,7 @@ The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow 
 
 We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that are able to simulate some natural phenomenon such as flame and gas.
 
-### Fractal Sum
+#### Fractal Sum
 
 This main work is performed in the 'turbulance_p' function. If you look at it closely, you will notice a loop that makes 24 copies of the image
 
@@ -65,6 +65,33 @@ Note : To zoom out the image, we simply multiply the sampling coordinates by 1.4
 So if we originally sample at the uv coordinates 0.0 to 1.0, the next iteration will be sampled at 0.0 to 1.4
 
 Please check out the complete description of the source code of the Fractal Flow Noise Shader below.
+
+
+#### Animation
+To make the result even more interesting, we try to animate each copy of the basic image according to the time elapsed. The animation is a simple movement / shift of the image copy. The higher the frequency (image zoomed smaller), the more it is shifted.
+
+The amount of shift is tracked by the variable newpos. For each iteration, the shift increases like a geometric series
+
+newpos+= t*0.23;
+
+In series form, the new position will take the form
+newpos = pos + t * 0.23 + t * t * 0.23 * 0.23 + t * t * t * 0.23 * 0.23 * 0.23 + .....
+
+We do not sample the zoomed copy of the basic image using just the 'newpos' variable. Here, we introduce an additional control parameter known as 'strength'. This 'strength' variable is just a weight to control the amount of shift / movement. For the current implementation, this weight is a constant factor at 0.5. There is no restriction or whatever why it cannot vary according to each iteration.
+
+
+adv = (newpos - pos)*strength; 
+pos = pos + adv;
+
+//comment : take the average between the desired new position and current position and use the value (pos) to sample the image 
+
+Due to the computation of the 'newpos' variable as a linear direction, the animation will generally take the form of a main direction (with varying speeds for each copy). Now we want to make different parts of the image move differently, so we create distribution functions that vary according to the position 'p' of the current pixel. These distribution functions (named pdf and pdf2 for the x and y axes), form a layer that allows each pixel of each image copy to move slightly differently from its neighbors.
+
+Example: for pdf1 and pdf2 functions
+float val = abs(atan(p.y*0.9543))*(cos(p.x*0.9532)+sinh(p.y*0.9816));
+float val = length(p)*(cos(p.y/p.x*0.9532)+sinh(p.y*0.9816));
+
+The original implementation of these probability distribution functions are based approximately on polar coordinates with the length and arctangent functions.  The actual implementation makes modifications to them largely by trial and error. The main intent is for these functions to be periodic , so you will notice the presence of sinusoidal and hyperbolic functions. To generate an interesting animation, these functions and their parameters are arbitrarily selected, and the reader may want to experiment by plugging different types of functions and parameters values to 'engineer' some other variations.
 
 ## Gaussian Difference Mask
 
@@ -222,9 +249,9 @@ Fractal Flow Noise
 
 Particles
 
-## Fractal Flow Noise Metal Shader - Source Code Description
+Shift below to a different article
 
-https://github.com/Misfits-Rebels-Outcasts/ShaderMuse
+## Fractal Flow Noise Metal Shader - Source Code Description
 
 ### Description
 
