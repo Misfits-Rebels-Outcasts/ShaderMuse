@@ -32,9 +32,7 @@ In other words, a Shader is a set of computer instructions (computer program) th
 
 With the above being said, let's get started to mix our Filters and Shader to get our photo effect. We are going to use Swift, Core Image CIFilter, and Apple Metal Shader to achieve the above. 
 
-The original photo is shown below. 
-
-[]
+The original photo is shown in first inage above. 
 
 It is possible to develop a Metal Shader that generates the entire Fire Shader Photo Effect above. But instead, we are going to use Digital Compositing concepts to create a Pipeline (Node Graph) of CIFilter and a more minimal Metal Shader to achieve this. With a Digital Compositing Pipeline, we can easily swap out filters in the compiled app, for example, from a Gaussian Blur to a Motion Blur, to see how it affects our photo effect.
 
@@ -45,6 +43,26 @@ The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow 
 [Source->Image]
 
 We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that are able to simulate some natural phenomenon such as flame and gas.
+
+### Fractal Sum
+
+This main work is performed in the 'turbulance_p' function. If you look at it closely, you will notice a loop that makes 24 copies of the image
+
+for (float i= 1.0;i <24.0;i++ )
+
+For each iteration, the image is zoomed out by 1.4, while the weight is reduced by 1.5. The zooming is achieved using the pixel position represented by the variable p described in the previous section
+
+amplitude *= 1.5; //weight
+pos *= 1.4; //scale
+
+So the final sum is something like a series as below
+
+val = amplitude * sample(pos) + amplitude * 1/1.5 * sample(pos*1.4)  + amplitude * 1/1.5 * 1/1.5 * sample(pos*1.4*1.4)  + ....
+
+Note : The val (float3) is not just a single value. It is a 3D vector that represents the sampled value of each of the components Red, Green , Blue of the final color that is returned 
+
+Note : To zoom out the image, we simply multiply the sampling coordinates by 1.4 for each iteration.
+So if we originally sample at the uv coordinates 0.0 to 1.0, the next iteration will be sampled at 0.0 to 1.4
 
 Please check out the complete description of the source code of the Fractal Flow Noise Shader below.
 
