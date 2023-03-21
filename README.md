@@ -185,7 +185,14 @@ https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
 
 In the Presets of the app, select the FIRE preset, and you can see what we have described above. 
 
-<img src=documentation/FirePreset.JPG width="40%" height="40%">
+<img src=documentation/FirePreset.jpeg width="40%" height="40%">
+
+After adding the "Fire" effect, follow the steps below to add "smoke" to our Fire Photo Effect.
+
+1. Tap on the "f" button.
+2. Add a "FBM Noise" Shader.
+3. Add a "Mix" Composite Filter.
+4. Tap on the "Mix" node, change the Background to "7".
 
 # List of Metal Shaders  
 
