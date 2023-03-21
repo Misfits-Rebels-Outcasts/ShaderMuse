@@ -171,9 +171,9 @@ The (0) in step 1 refers to the input image used by the Photo Effect Noir filter
 
 ## Why use a Digital Compositing Pipeline?
 
-Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. More information is available at Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md).
+Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. More information is available at Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef).
 
-Shader Muse has forked the [Nodef project](https://github.com/Misfits-Rebels-Outcasts) to enable Digital Compositing of Shaders and Filters in iOS.
+Shader Muse has forked the [Nodef project](https://github.com/Misfits-Rebels-Outcasts/Nodef) to enable Digital Compositing of Shaders and Filters in iOS.
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
