@@ -196,7 +196,13 @@ An open-source node-based photo filters and effects compositor is created to tes
 Programming Language
 * Swift
 
-# Metal Shaders
+# Metal Shaders 
+
+FBM Noise - Morgan Mcguire @morgan3d
+
+Fractal Flow Noise
+
+Particles
 
 ## Fractal Flow Noise Metal Shader - Source Code Description
 
