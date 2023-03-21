@@ -74,11 +74,22 @@ We can also use a Digital Compositing Node Graph with Core Image CIFilter names 
      V               V     
      CIColorDodgeBlend  
 
+This gives us a mask for our Fire Effect as shown below:
+
+<img src=documentation/GaussianDifferenceMask.JPG width="84%" height="84%">
+
+We can use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
+
+Gaussian Blur Radius - 14.88 (or 5.18)
+Gaussian Blur Radius - 4.63
+
 ### What is Digital Compositing?
 
 Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the final outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
 
-We can also express the Node Graph succintly in English using a simple list below. 
+### What is Digital Compositing Pipeline?
+
+We can also express the Node Graph succintly in English using a simple list below which can easily be displayed on our mobile device. 
 
 0. Original Image
 1. Photo Effect Noir
@@ -93,14 +104,7 @@ We apply a Photo Effect Noir filter on the original image and then chain the out
 
 See [Open Source Digital Compositing Pipeline](https://Misfits-Rebels-Outcasts/Nodef/NodePipeline.md) for more information.
 
-We can use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
-
-3. Gaussian Blur Radius - 14.88 (or 5.18)
-4. Gaussian Blur Radius - 4.63
-
-This gives us a mask for our Fire Effect as shown below:
-
-<img src=documentation/GaussianDifferenceMask.JPG width="84%" height="84%">
+## Fire Shader Effect with a Digital Compositing Pipeline of Metal Shaders and CIfilter
 
 Finally, we perform a Blend With Mask with the original image and a Fractal Flow Noise using the mask above. This is shown below:
 
@@ -131,8 +135,11 @@ We can also test out all the concepts above in the compiled app: Nodef Digital C
 
 https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
 
+## Why Digital Compositing?
 
-We can further add Smoke to Fire using a Fractal Brownian Motion Noise Shader. The source code of this shader is also available in the repo. 
+Why go through all the trouble? Why not just put everything in code?
+
+For example, we can further add Smoke to Fire using a Fractal Brownian Motion Noise Shader. The source code of this shader is also available in the repo. 
 
 0. Original Image
 1. Photo Effect Noir
@@ -147,21 +154,16 @@ We can further add Smoke to Fire using a Fractal Brownian Motion Noise Shader. T
 
 [Video]
 
+## Project
+Source Code (Coming Soon)
 
-
-## Open-Source Project (GPL)
+### Open-Source Project (GPL)
 
 An open-source node-based photo filters and effects compositor is created to test the ideas above.
 [Node-based Compositing on Mobile](documentation/NodeBasedCompositingOnMobile.md)
 
-Ideas
+### Platform
 
-* [Node Pipeline](documentation/NodePipeline.md) for representing Node Graph
-* [Auto Chaining](documentation/AutoChaining.md) & [Reverse Compositing](documentation/ReverseCompositing.md)
-* [Viewer Cycling](documentation/ViewerCycling.md)
-* [Direct Acyclic Graph Generation/Import](documentation/DirectedAcyclicGraphGeneration.md)
-
-Platform
 * iOS
 * iPadOS
 * Mac
@@ -169,12 +171,7 @@ Platform
 Programming Language
 * Swift
 
-### Sister Project
-
-The [WYSIWYG Draw User Interface based on SwiftUI](https://github.com/Misfits-Rebels-Outcasts/SwiftUI-WYSIWYG-Draw) for Nodef.
-
-
-
+# Metal Shaders
 
 ## Fractal Flow Noise Metal Shader - Source Code Description
 
