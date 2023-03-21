@@ -56,6 +56,8 @@ A Gaussian Difference Mask is a "difference of Gaussians (DoG) is a feature enha
 
 This mask "can be utilized to increase the visibility of edges and other detail present in a digital image. A wide variety of alternative edge sharpening filters operate by enhancing high frequency detail, but because random noise also has a high spatial frequency, many of these sharpening filters tend to enhance noise, which can be an undesirable artifact. The difference of Gaussians algorithm removes high frequency detail that often includes random noise, rendering this approach one of the most suitable for processing images with a high degree of noise." (Wikipedia https://en.wikipedia.org/wiki/Difference_of_Gaussians)
 
+## Digital Compositing Node Graph
+
 We can also use a Digital Compositing Node Graph with Core Image CIFilter names to illustrate what we are doing above:
 
      Original Image    
@@ -72,10 +74,11 @@ We can also use a Digital Compositing Node Graph with Core Image CIFilter names 
      V               V     
      CIColorDodgeBlend  
 
-## What is Digital Compositing?
+### What is Digital Compositing?
 
 Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the final outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
-We can also express this succintly with a Digital Compositing Pipeline
+
+We can also express the Node Graph succintly in English using a simple list below. 
 
 0. Original Image
 1. Photo Effect Noir
@@ -86,12 +89,18 @@ We can also express this succintly with a Digital Compositing Pipeline
 
 ### Explanation
 
-We apply a Photo Effect Noir filter on the original image and then chain the output to a Color Invert. In Step 3-4, we create Gaussian Blur based on the output of the Color Invert. The (2) refers to the input image used by both of the Gaussian Blur. Finally we apply a Color Dodge Blend on the two Gaussian Blur to achieve the Gaussian Difference Mask. We can use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
+We apply a Photo Effect Noir filter on the original image and then chain the output to a Color Invert. In Step 3-4, we create Gaussian Blur based on the output of the Color Invert. The (2) refers to the input image used by both of the Gaussian Blur. Finally we apply a Color Dodge Blend on the two Gaussian Blur to achieve the Gaussian Difference Mask. 
+
+See [Open Source Digital Compositing Pipeline](https://Misfits-Rebels-Outcasts/Nodef/NodePipeline.md) for more information.
+
+We can use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
 
 3. Gaussian Blur Radius - 14.88 (or 5.18)
 4. Gaussian Blur Radius - 4.63
 
 This gives us a mask for our Fire Effect as shown below:
+
+<img src=documentation/GaussianDifferenceMask.JPG width="84%" height="84%">
 
 Finally, we perform a Blend With Mask with the original image and a Fractal Flow Noise using the mask above. This is shown below:
 
