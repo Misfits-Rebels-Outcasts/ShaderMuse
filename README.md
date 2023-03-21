@@ -175,7 +175,7 @@ We apply a Photo Effect Noir filter on the original image and then chain the out
 
 Find out more on Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md)
 
-For one, we can express the steps of our Digital Compositing Pipeline as a List as shown below:
+For one, we can express our Digital Compositing Pipeline as a simple list:
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
@@ -183,16 +183,18 @@ Check out the compiled app of Shader Muse - Pipeline - at the following:
 
 https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
 
-In the Presets of the app, select the FIRE preset, and you can see what we have described above. 
+## Adding Smoke to Fire
+
+1. In the Presets of the app, tap on the FIRE preset to apply what we have described above to our photo.
 
 <img src=documentation/FirePreset.jpeg width="40%" height="40%">
 
-After adding the "Fire" effect, follow the steps below to add "smoke" to our Fire Photo Effect.
+2. Tap on the "f" button.
+3. Add a "FBM Noise" Shader.
+4. Add a "Mix" Composite Filter.
+5. Tap on the "Mix" node, change the Background to "7".
 
-1. Tap on the "f" button.
-2. Add a "FBM Noise" Shader.
-3. Add a "Mix" Composite Filter.
-4. Tap on the "Mix" node, change the Background to "7".
+<img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
 # List of Metal Shaders  
 
