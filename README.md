@@ -58,19 +58,19 @@ This mask "can be utilized to increase the visibility of edges and other detail 
 
 We can also use a Digital Compositing Node Graph with Core Image CIFilter names to illustrate what we are doing above:
 
-Original Image
-|
-V
-CIPhotoEffectNoir
-|
-V
-CIColorInvert
-|                |
-V                V
-CIGaussianBlur   CIGaussianBlur
-|                |
-V                V
-CIColorDodgeBlend
+     Original Image    
+     |           
+     V           
+     CIPhotoEffectNoir    
+     |           
+     V           
+     CIColorInvert    
+     |               |     
+     V               V     
+     CIGaussianBlur  CIGaussianBlur
+     |               |     
+     V               V     
+     CIColorDodgeBlend  
 
 ## What is Digital Compositing?
 
