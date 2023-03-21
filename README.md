@@ -121,7 +121,7 @@ We can also use a Digital Compositing Node Graph with Core Image CIFilter names 
 
 This gives us a mask for our Fire Effect as shown below:
 
-<img src=documentation/GaussianDifferenceMask.JPG width="84%" height="84%">
+<img src=documentation/GaussianDifferenceMask.JPG width="50%" height="50%">
 
 We can use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
 
