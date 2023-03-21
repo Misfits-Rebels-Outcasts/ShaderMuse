@@ -10,7 +10,7 @@ We also animate each copy of the basic image so that they move independently fro
 
 ## Output
 
-<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
+<img src=FractalFlowNoise.JPG width="50%" height="50%">
 
 The size of the output image of the shader is dependent upon an input image. For example, if the input image is 800x600 pixels, so will it be for the output size. Within the shader itself, this size is in the range 0.0 to 1.0 (floating point numbers) for the u-axis and v-axis. (The u-axis is just the x-axis but ranges from 0.0 to 1.0 instead of 0 to 800, while the v-axis is just the y-axis but ranges from 0.0 to 1.0 instead of 0 to 600). Together the u and v form a 2D vector variable that represents the position of the current pixel.
 
