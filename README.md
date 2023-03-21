@@ -175,6 +175,8 @@ For example, we can further add Smoke to Fire using a Fractal Brownian Motion No
 8. FBM Noise
 9. Mix (8,0)
 
+<img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="84%" height="84%">
+
 [Video]
 
 ## Project
