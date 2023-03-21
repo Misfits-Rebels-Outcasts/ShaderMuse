@@ -4,11 +4,11 @@ Shader Muse explores the fun from mixing/chaining to Digital Compositing of Phot
 
 For example, we explore the fun of mixing this Image 
 
-<img src=documentation/Malacca.JPG width="84%" height="84%">
+<img src=documentation/Malacca.JPG width="50%" height="50%">
 
 with this Shader (Fractal Flow Noise)
 
-<img src=documentation/FractalFlowNoise.JPG width="84%" height="84%">
+<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
 
 to get this Photo Fire Effects Video.
 
@@ -40,7 +40,7 @@ It is possible to develop a Metal Shader that generates the entire Fire Shader P
 
 The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow Noise Shader. This Shader is a fractal sum of a given base image. What this means is that it takes a basic image file, makes many copies of it, some zoomed, some rotated, and blends them together. The blending is not uniform, however. The images that are zoomed smaller (having a higher frequency) will be blended with a lighter weight.  
 
-[Source->Image]
+<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
 
 We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that are able to simulate some natural phenomenon such as flame and gas.
 
