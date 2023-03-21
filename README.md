@@ -28,7 +28,7 @@ Image Filters is common and easily understood. Many modern software applications
 
 In other words, a Shader is a set of computer instructions (computer program) that affects the light, darkness, and color etc. of an image and it runs fast. Beyond the above, it can also perform things like animations or procedural texture image generation.
 
-## Fire Shader Photo Effect 
+## Fire Flame Shader Photo Effect 
 
 With the above being said, let's get started to mix our Filters and Shader to get our photo effect. We are going to use Swift, Core Image CIFilter, and Apple Metal Shader to achieve the above. 
 
