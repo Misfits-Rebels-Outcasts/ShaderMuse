@@ -173,17 +173,19 @@ We apply a Photo Effect Noir filter on the original image and then chain the out
 
 ## Why use a Digital Compositing Pipeline?
 
-Read more on [Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md)
+Find out more on Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md)
 
 For one, we can express the steps of our Digital Compositing Pipeline as a List as shown below:
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
-Check out the compiled app of Shader Muse at the following:
+Check out the compiled app of Shader Muse - Pipeline - at the following:
 
 https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
 
 In the Presets of the app, select the FIRE preset, and you can see what we have described above. 
+
+<img src=documentation/FirePreset.JPG width="40%" height="40%">
 
 # List of Metal Shaders  
 
