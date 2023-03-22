@@ -16,11 +16,11 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 
 ## Fire Flame Shader Photo Effect 
 
-To create the Photo Fire Effect, we first create a "fire like" Shader and use a mask make the "fire" appear natural on our image. For the mask, we compute a Difference of Gaussians of the grayscale image to product a sketch effect that is further used as the mask to create the effect of edges on the image catching fire.
+To create the Fire Photo Effect, we first develop a "fire like" Shader and use a mask to create the effect of edges on the image catching fire. A Difference of Gaussian on the grayscale of the original image is first computed and then used to produce a sketch effect mask.
 
-We need to chain several filters to create the mask and a blend with mask filter to put everything together. Our open-source project Shader Muse uses Swift, Core Image CIFilter, and Apple Metal Shader to achieve all this.
+We need to chain several filters to create the mask and a blend with mask filter to put everything together. Our project uses Swift, Core Image CIFilter, and Apple Metal Shader to achieve all this.
 
-#### What is a Shader?
+#### Just in case: What is a Shader?
 
 Image Filters is common and easily understood. Many modern software applications or apps provide image filtering capabilities. But then what is a Shader? From Wikipedia, we know that "a shader is a computer program that calculates the appropriate levels of light, darkness, and color during the rendering of a ... process known as shading.". 
 
@@ -148,13 +148,13 @@ The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoi
 
 It is possible to develop a Metal Shader to generate the entire Fire Shader Photo Effect above. But instead, we have chosen to apply Digital Compositing concepts and created a node graph of CIFilter with a considerably basic Metal Shader to achieve the same thing. 
 
-The advantage of doing this is we have surfaced many of the programming steps to something controllable by a user. For example, a graphics designer using an app that uses our Digital Compositing Shader node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.
+The advantage of doing this is many of the programming steps is now surfaced and is controllable by a user. For example, a graphics designer using an app that uses a Digital Compositing Shader node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.
 
-### Just in case, what is Digital Compositing?
+### Just in case: what is Digital Compositing?
 
 Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
 
-## Beyond a Node Graph
+## Beyond a Node Graph: Digital Compositing Pipeline
 
 We can also express the node graph above succinctly in English as a list of steps.
 
@@ -171,19 +171,17 @@ The (0) in step 1 refers to the input image used by the Photo Effect Noir filter
 
 ## Why use a Digital Compositing Pipeline?
 
-Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. More information is available at Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef).
+Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md) ([as described by Nodef](https://github.com/Misfits-Rebels-Outcasts/Nodef)), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. 
 
-Shader Muse has forked the [Nodef project](https://github.com/Misfits-Rebels-Outcasts/Nodef) to enable Digital Compositing of Shaders and Filters in iOS.
+Shader Muse forked the [Nodef Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef) project to enable Digital Compositing of Shaders and Filters in iOS (iPhone, iPad, and Mac).
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
-Check out the compiled app of Shader Muse - Pipeline - at the following:
-
-https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
+Check out the compiled app of Shader Muse: [Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489).
 
 ## Adding Smoke to Fire Effects
 
-1. Download and run the Pipeline app - https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
+1. Download and run the Shader Muse [Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489) app - 
 2. In the Presets of the app, tap on the FIRE preset to apply the Fire Effect.
 
 <img src=documentation/FirePreset.jpeg width="40%" height="40%">
