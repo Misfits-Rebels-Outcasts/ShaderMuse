@@ -1,6 +1,6 @@
 #  Digital Compositing Metal Shaders and CIFilter
 
-Shader Muse explores the fun from mixing/chaining to Digital Compositing of Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). 
+Shader Muse explores the fun from mixing, chaining, and Digital Compositing Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). 
 
 For example, we explore the fun of mixing this Image 
 
@@ -13,6 +13,8 @@ with this Shader (Fractal Flow Noise)
 to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effects Video</a>.
 
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
+
+Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, the main purpose of this project.
 
 ## Fire Flame Shader Photo Effect 
 
