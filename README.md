@@ -150,7 +150,7 @@ The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoi
 
 It is possible to develop a Metal Shader to generate the entire Fire Shader Photo Effect above. But instead, we have chosen to apply Digital Compositing concepts and created a node graph of CIFilter with a considerably basic Metal Shader to achieve the same thing. 
 
-The advantage of doing this is many of the programming steps is now surfaced and is controllable by a user. For example, a graphics designer using an app that uses a Digital Compositing Shader node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.
+**The advantage of doing this is many of the programming steps is now surfaced and is controllable by a user. For example, a graphics designer using an app that uses a Digital Compositing node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.**
 
 ### Just in case: what is Digital Compositing?
 
@@ -179,9 +179,9 @@ Shader Muse forked the [Nodef Digital Compositing Pipeline](https://github.com/M
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
-Check out the compiled app of Shader Muse: [Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489).
+Check out the compiled app of Shader Muse: *[Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489)*.
 
-## Adding Smoke to Fire Effects
+## Adding Smoke to the Fire Effect
 
 1. Download and run the Shader Muse [Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489) app - 
 2. In the Presets of the app, tap on the FIRE preset to apply the Fire Effect.
