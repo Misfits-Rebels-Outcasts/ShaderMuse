@@ -1,6 +1,6 @@
 #  Digital Compositing Metal Shaders and CIFilter
 
-Shader Muse explores the fun from mixing/chaining to Digital Compositing of Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). 
+Shader Muse explores the fun from Mixing, Chaining, and Digital Compositing Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). 
 
 For example, we explore the fun of mixing this Image 
 
@@ -10,17 +10,19 @@ with this Shader (Fractal Flow Noise)
 
 <img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
 
-to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effects Video</a>.
+to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effects Video</a> (mp4 video).
 
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
 
+Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, the main purpose of this project.
+
 ## Fire Flame Shader Photo Effect 
 
-To create the Photo Fire Effect we first create a "fire like" Shader and use a mask make the "fire" appear natural on our image. For the mask, we compute a Difference of Gaussians of the grayscale image to product a sketch effect that is further used as the mask to create the effect of edges on the image catching fire.
+To create the Fire Photo Effect, we first develop a "fire like" Shader and use a mask to create the effect of edges on the image catching fire. A Difference of Gaussian on the grayscale of the original image is first computed and then used to produce a sketch effect mask.
 
-We need to chain several filters to create the mask and also a blend with mask filter to put everything together. Our open source project Shader Muse uses Swift, Core Image CIFilter, and Apple Metal Shader to achieve all this.
+We need to chain several filters to create the mask and a blend with mask filter to put everything together. Our project uses Swift, Core Image CIFilter, and Apple Metal Shader to achieve all this.
 
-#### What is a Shader?
+#### Just in case: What is a Shader?
 
 Image Filters is common and easily understood. Many modern software applications or apps provide image filtering capabilities. But then what is a Shader? From Wikipedia, we know that "a shader is a computer program that calculates the appropriate levels of light, darkness, and color during the rendering of a ... process known as shading.". 
 
@@ -35,7 +37,7 @@ The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow 
 
 <img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
 
-We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that are able to simulate some natural phenomenon such as flame and gas.
+We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that can simulate some natural phenomenon such as flame and gas.
 
 #### Fractal Sum
 
@@ -48,14 +50,14 @@ For each iteration, the image is zoomed out by 1.4, while the weight is reduced 
 amplitude *= 1.5; //weight
 pos *= 1.4; //scale
 
-So the final sum is something like a series as below
+So, the final sum is something like a series as below
 
 val = amplitude * sample(pos) + amplitude * 1/1.5 * sample(pos*1.4)  + amplitude * 1/1.5 * 1/1.5 * sample(pos*1.4*1.4)  + ....
 
 Note : The val (float3) is not just a single value. It is a 3D vector that represents the sampled value of each of the components Red, Green , Blue of the final color that is returned 
 
 Note : To zoom out the image, we simply multiply the sampling coordinates by 1.4 for each iteration.
-So if we originally sample at the uv coordinates 0.0 to 1.0, the next iteration will be sampled at 0.0 to 1.4
+So, if we originally sample at the uv coordinates 0.0 to 1.0, the next iteration will be sampled at 0.0 to 1.4
 
 #### Animation
 
@@ -82,7 +84,7 @@ Example: for pdf1 and pdf2 functions
 float val = abs(atan(p.y*0.9543))*(cos(p.x*0.9532)+sinh(p.y*0.9816));
 float val = length(p)*(cos(p.y/p.x*0.9532)+sinh(p.y*0.9816));
 
-The original implementation of these probability distribution functions are based approximately on polar coordinates with the length and arctangent functions.  The actual implementation makes modifications to them largely by trial and error. The main intent is for these functions to be periodic , so you will notice the presence of sinusoidal and hyperbolic functions. To generate an interesting animation, these functions and their parameters are arbitrarily selected, and the reader may want to experiment by plugging different types of functions and parameters values to 'engineer' some other variations.
+The original implementation of these probability distribution functions is based approximately on polar coordinates with the length and arctangent functions.  The actual implementation makes modifications to them largely by trial and error. The main intent is for these functions to be periodic , so you will notice the presence of sinusoidal and hyperbolic functions. To generate an interesting animation, these functions and their parameters are arbitrarily selected, and the reader may want to experiment by plugging different types of functions and parameters values to 'engineer' some other variations.
 
 ### Difference of Gaussian Sketch Mask
 
@@ -123,7 +125,7 @@ We use different Radius values in the two Gaussian Blur to vary the output of ou
      
 The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoise as the background image, and the output of CIColorDodgeBlend (DoG) as the mask.
 
-<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
+<img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
           
 ## Fire Shader Effect - Full Node Graph
 
@@ -146,17 +148,17 @@ The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoi
 
 ## Why use Digital Compositing on Shaders?
 
-It is possible to develop a Metal Shader to generate the entire Fire Shader Photo Effect above. But instead, we have chosen to apply Digital Compositing concepts and created a node graph of CIFilter with a very basic Metal Shader to achieve the same thing. 
+It is possible to develop a Metal Shader to generate the entire Fire Shader Photo Effect above. But instead, we have chosen to apply Digital Compositing concepts and created a node graph of CIFilter with a considerably basic Metal Shader to achieve the same thing. 
 
-The advantage of doing this is we have surfaced many of the programming steps to something controllable by a user. For example, a graphics designer using an app that uses our Digital Compositing Shader node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.
+**The advantage of doing this is many of the programming steps is now surfaced and is controllable by a user. For example, a graphics designer using an app that uses a Digital Compositing node graph can easily swap in a better "fire" or "mask". Or add additional steps to control the exposure or color correct their video.**
 
-### Just in case, what is Digital Compositing?
+### Just in case: what is Digital Compositing?
 
-Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the final outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
+Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
 
-## Digital Compositing Pipeline - Beyond a Node Graph
+## Beyond a Node Graph: Digital Compositing Pipeline
 
-We can also express the node graph above succintly in English as a list of steps with a Digital Compositing Pipline below. 
+We can also express the node graph above succinctly in English as a list of steps.
 
 0. Original Image (none)
 1. Photo Effect Noir (0)
@@ -167,42 +169,41 @@ We can also express the node graph above succintly in English as a list of steps
 6. Fractal Flow Noise (none)
 7. Blend With Mask (input - 0, background - 6, mask - 5)
 
-We can read the above as below:
-
-We apply a Photo Effect Noir filter on the original image and then chain the output to a Color Invert. The (0) refers to the input image used by the Photo Effect Noir filter. In steps 3 and 4, we create Gaussian Blurs on the output of Color Invert. The (2) refers to the input image used by both of the Gaussian Blurs. The steps 3, 4, and 5 simply compute the Difference of Gaussians of the grayscale image to product a sketch effect that is further used as a mask to create the effects of edges catching fire. Finally we apply a Color Dodge Blend on the two Gaussian Blur to create our mask 
+The (0) in step 1 refers to the input image used by the Photo Effect Noir filter. Steps 3, 4, and 5 compute the Difference of Gaussians of the grayscale image to produce a sketch effect that is further used as a mask to create the effects of edges catching fire. 
 
 ## Why use a Digital Compositing Pipeline?
 
-Find out more on Nodef [Open Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md)
+Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md) ([as described by Nodef](https://github.com/Misfits-Rebels-Outcasts/Nodef)), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. 
 
-For one, we can express our Digital Compositing Pipeline as a simple list:
+Shader Muse forked the [Nodef Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef) project to enable Digital Compositing of Shaders and Filters in iOS (iPhone, iPad, and Mac).
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
-Check out the compiled app of Shader Muse - Pipeline - at the following:
+Check out the compiled app of Shader Muse: *[Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489)*.
 
-https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489
+## Adding Smoke to the Fire Effect
 
-## Adding Smoke to Fire
-
-1. In the Presets of the app, tap on the FIRE preset to apply what we have described above to our photo.
+1. Download and run the Shader Muse [Pipeline](https://apps.apple.com/us/app/nodef-photo-filters-effects/id1640788489) app - 
+2. In the Presets of the app, tap on the FIRE preset to apply the Fire Effect.
 
 <img src=documentation/FirePreset.jpeg width="40%" height="40%">
 
-2. Tap on the "f" button.
-3. Add a "FBM Noise" Shader.
-4. Add a "Mix" Composite Filter.
-5. Tap on the "Mix" node, change the Background to "7".
+3. Tap on the "f" button to view the Digital Compositing Pipeline of our Fire Effect.
+4. We can further enhance this effect by adding smoke: "FBM Noise" Shader.
+4. Next add a "Mix" Composite Filter to mix our Fire Effects with the "FBM Noise".
+5. Tap on the "Mix" node and change the Background to "7".
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
-# List of Metal Shaders  
+You can also adjust the intensity of the Fire Effect by tapping on the Gaussian Blur nodes and changing the Radius.
+
+# List of Metal Shaders in Shader Muse 
 
 * FBM Noise - based on 2D Noise by Morgan Mcguire @morgan3d
 * [Fractal Flow Noise Shader](documentation/FractalFlowNoiseShader.md)
 * Particles
 
-and over 150 CIFilter for Digital Compositing
+and over 150 CIFilter for Digital Compositing. Please star our project, we will add more Shaders with your encouragement.
 
 # Open-Source Project (GPLv2)
 
