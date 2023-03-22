@@ -1,6 +1,6 @@
 #  Digital Compositing Metal Shaders and CIFilter
 
-Shader Muse explores the fun from mixing, chaining, and Digital Compositing Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). 
+Shader Muse explores the fun from Mixing, Chaining, and Digital Compositing Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). 
 
 For example, we explore the fun of mixing this Image 
 
