@@ -16,6 +16,10 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 
 Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, enabling an end user such as a creative graphics designer to make changes to the node graph without programming.
 
+#### Gallery Collection
+
+<img src=documentation/ArtyMetal.gif width="15%" height="15%">
+
 ## Fire Flame Shader Photo Effect 
 
 To create the Fire Photo Effect, we first develop a "fire like" Shader and use a mask to create the effect of edges on the image catching fire. A Difference of Gaussian on the grayscale of the original image is first computed and then used to produce a sketch effect mask.
