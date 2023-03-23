@@ -14,7 +14,7 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
 
-Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, the main purpose of this project.
+Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, enabling an end user such as a creative graphics designer to make changes to the node graph without programming.
 
 ## Fire Flame Shader Photo Effect 
 
@@ -173,9 +173,9 @@ The (0) in step 1 refers to the input image used by the Photo Effect Noir filter
 
 ## Why use a Digital Compositing Pipeline?
 
-Displaying a node graph as a list of steps, a [Digital Composting Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md) ([as described by Nodef](https://github.com/Misfits-Rebels-Outcasts/Nodef)), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. 
+Displaying a node graph as a list of steps, a [Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md) (invented by Nodef), is very useful in circumstances when there is limited screen space. For example, in times when we need to view or change a node graph on a mobile device. 
 
-Shader Muse forked the [Nodef Digital Compositing Pipeline](https://github.com/Misfits-Rebels-Outcasts/Nodef) project to enable Digital Compositing of Shaders and Filters in iOS (iPhone, iPad, and Mac).
+Shader Muse forked [Nodef](https://github.com/Misfits-Rebels-Outcasts/Nodef) project to enable Digital Compositing of Shaders and Filters in iOS (iPhone, iPad, and Mac).
 
 <img src=documentation/FireShaderEffectsDigitalCompositingPipeline.jpeg width="40%" height="40%">
 
