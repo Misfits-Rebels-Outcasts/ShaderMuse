@@ -18,7 +18,8 @@ Beyond the fun, we explore the advantages of surfacing the properties of shaders
 
 #### Shader Gallery (coming soon)
 
-<img src=documentation/ArtsyFlower.gif width="15%" height="15%">  <img src=documentation/ComicPuzzle.gif width="15%" height="15%">  <img src=documentation/ArtyMetal.gif width="15%" height="15%"> 
+<img src=documentation/ArtsyFlower.gif width="15%" height="15%"> <img src=documentation/ComicPuzzle.gif width="15%" height="15%">  
+<img src=documentation/GradientFlow.gif width="15%" height="15%"> <img src=documentation/ArtyMetal.gif width="15%" height="15%"> 
 
 ## Fire Flame Shader Photo Effect 
 
