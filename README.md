@@ -16,9 +16,9 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 
 Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, enabling an end user such as a creative graphics designer to make changes to the node graph without programming.
 
-### Gallery
+#### Gallery Collection
 
-<img src=documentation/ArtsyMetal.gif width="732" height="960">
+<img src=documentation/ArtyMetal.gif width="15%" height="15%">
 
 ## Fire Flame Shader Photo Effect 
 
