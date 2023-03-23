@@ -23,3 +23,6 @@
 
 #### Arty Metal
 <img src=ArtyMetal.gif width="15%" height="15%"> 
+
+#### Sinusoidal Noise
+<img src=ArtyMetal.gif width="30%" height="30%"> 
