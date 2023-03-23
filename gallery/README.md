@@ -1,4 +1,4 @@
-#  Shaders Gallery 
+#  Shaders Gallery - Testing In Progress
 
 ### How to load the pipeline document in this gallery?
 
