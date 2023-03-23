@@ -128,7 +128,7 @@ We use different Radius values in the two Gaussian Blur to vary the output of ou
      
 The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoise as the background image, and the output of CIColorDodgeBlend (DoG) as the mask.
 
-<img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
+<img src=documentation/MAlaccaFireComposited.JPG width="50%" height="50%">
           
 ## Fire Shader Effect - Full Node Graph
 
