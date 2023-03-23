@@ -8,7 +8,7 @@
 4. Select the downloaded file.
 
 #### Lake Noise
-<img src=Lake.gif width="15%" height="15%">  
+<img src=Lake.gif width="30%" height="30%">  
 
 [Pipeline File](Lake.json)
 
