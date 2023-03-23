@@ -14,7 +14,7 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
 
-#### [Shader Gallery](gallery) (More fun coming soon)
+#### [Shader Gallery](gallery) (coming soon)
 
 <img src=gallery/Lake.gif width="15%" height="15%"> <img src=gallery/ArtsyFlower.gif width="15%" height="15%"> <img src=gallery/ComicPuzzle.gif width="15%" height="15%">  
 <img src=gallery/GradientFlow.gif width="15%" height="15%"> <img src=gallery/SinusoidalNoise.gif width="15%" height="15%"> <img src=gallery/ArtyMetal.gif width="15%" height="15%"> 
