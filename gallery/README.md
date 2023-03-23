@@ -1,5 +1,7 @@
 #  Shaders Gallery - Testing In Progress
 
+If you have design a Digital Composited Shader, please feel free to it here.
+
 ### How to load the pipeline document in this gallery?
 
 1. Download the pipeline file.
