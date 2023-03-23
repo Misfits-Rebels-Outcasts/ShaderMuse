@@ -1,4 +1,4 @@
-#  Shaders Gallery 
+#  Shaders Gallery - Testing In Progress
 
 ### How to load the pipeline document in this gallery?
 
@@ -11,3 +11,15 @@
 <img src=Lake.gif width="15%" height="15%">  
 
 [Pipeline File](Lake.json)
+
+#### Artsy Flower
+<img src=ArtsyFlower.gif width="15%" height="15%"> 
+
+#### Comic Puzzle
+<img src=ComicPuzzle.gif width="15%" height="15%">  
+
+#### Gradient Flow
+<img src=GradientFlow.gif width="15%" height="15%"> 
+
+#### Arty Metal
+<img src=ArtyMetal.gif width="15%" height="15%"> 
