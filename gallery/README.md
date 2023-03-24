@@ -12,6 +12,16 @@ If you have design a Digital Composited Shader, please feel free to it here.
 #### Lake Noise
 <img src=Lake.gif width="30%" height="30%">  
 
+Pipeline
+
+0. Sunflower Image
+1. Color Controls - 0
+2. Radial Gradient - none
+3. FBM Noise - none
+4. Difference Blend Mode - 3,"2"
+
+<img src=LakePipeline.jpg width="30%" height="30%">  
+
 [Pipeline File](Lake.json)
 
 #### Artsy Flower
