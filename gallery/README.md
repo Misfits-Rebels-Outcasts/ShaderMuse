@@ -2,13 +2,6 @@
 
 If you have design a Digital Composited Shader, please feel free to it here.
 
-### How to load the pipeline document in this gallery?
-
-1. Download the pipeline file.
-2. In the app, tap on the document icon, top left corner, in the Pipeline app.
-3. Select Nodef Documents->Others->Import.
-4. Select the downloaded file.
-
 #### Lake Noise
 <img src=Lake.gif width="30%" height="30%">  
 
@@ -56,3 +49,13 @@ Pipeline
 
 #### Sinusoidal Noise
 <img src=SinusoidalNoise.gif width="30%" height="30%"> 
+
+### How to load the pipeline document in this gallery?
+
+The pipeline json file is available in this gallery folder.
+
+1. Download the pipeline file.
+2. In the app, tap on the document icon, top left corner, in the Pipeline app.
+3. Select Nodef Documents->Others->Import.
+4. Select the downloaded file.
+
