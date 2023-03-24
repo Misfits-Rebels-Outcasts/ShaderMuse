@@ -21,6 +21,8 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 <img src=gallery/Lake.gif width="15%" height="15%"> <img src=gallery/ArtsyFlower.gif width="15%" height="15%"> <img src=gallery/ComicPuzzle.gif width="15%" height="15%">  
 <img src=gallery/GradientFlow.gif width="15%" height="15%"> <img src=gallery/SinusoidalNoise.gif width="15%" height="15%"> <img src=gallery/ArtyMetal.gif width="15%" height="15%"> 
 
+Jump straight into [compiling the project](code/Readme.md) - with XCode, Swift, Metal, and iOS.
+
 ## Fire Flame Shader Photo Effect 
 
 To create the Fire Photo Effect, we first develop a "fire like" Shader and use a mask to create the effect of edges on the image catching fire. A Difference of Gaussian on the grayscale of the original image is first computed and then used to produce a sketch effect mask.
@@ -212,7 +214,8 @@ and over 150 CIFilter for Digital Compositing. Please star our project, we will 
 
 # Open-Source Project (GPLv2)
 
-* Source Code (Coming Soon) - in the code folder
+* Source Code - in the code folder
+* [Compile](code/Readme.md)
 
 ## Platform
 
