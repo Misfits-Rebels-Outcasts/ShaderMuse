@@ -43,3 +43,9 @@ let downsampledImage = ImageUtil.downsample(imageAt: filePath, to: UIScreen.main
 
 Change shaderDownScale to a smaller value to create a higher resolution video.
 
+### Creating your own Metal Shader and integrating it with the Pipline.
+
+For creating your own Metal Shader and integrating it with the Pipeline, search for FractalFlowNoiseFX.swift in the source code. This a wrapper of the Metal Shader that integrates it to the Digital Compositing Pipeline.
+
+
+
