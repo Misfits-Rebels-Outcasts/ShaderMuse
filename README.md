@@ -11,9 +11,9 @@ with this Shader (Fractal Flow Noise)
 <img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
 
 to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effects Video</a> (mp4 video).
-
+<!--
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
-
+-->
 <img src=documentation/MalaccaFire.gif width="50%" height="50%">
 
 #### [Shader Gallery](gallery) (coming soon)
