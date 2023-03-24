@@ -15,7 +15,7 @@ Pipeline
 
 <img src=LakePipeline.jpg width="30%" height="30%">  
 
-[Pipeline File](Lake.json) - See section below on loading this file.
+[Pipeline File](Lake.json) - See the section below on how to import this file into the app.
 
 #### Artsy Flower
 <img src=ArtsyFlower.gif width="30%" height="30%"> 
