@@ -16,10 +16,12 @@ to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effe
 -->
 <img src=documentation/MalaccaFire.gif width="50%" height="50%">
 
-#### [Shader Gallery](gallery) (coming soon)
+#### [Shader Gallery](gallery/README.md) (coming soon)
 
 <img src=gallery/Lake.gif width="15%" height="15%"> <img src=gallery/ArtsyFlower.gif width="15%" height="15%"> <img src=gallery/ComicPuzzle.gif width="15%" height="15%">  
 <img src=gallery/GradientFlow.gif width="15%" height="15%"> <img src=gallery/SinusoidalNoise.gif width="15%" height="15%"> <img src=gallery/ArtyMetal.gif width="15%" height="15%"> 
+
+Jump straight into [compiling the project](code/Readme.md) - with XCode, Swift, Metal, and iOS.
 
 ## Fire Flame Shader Photo Effect 
 
@@ -212,7 +214,8 @@ and over 150 CIFilter for Digital Compositing. Please star our project, we will 
 
 # Open-Source Project (GPLv2)
 
-* Source Code (Coming Soon) - in the code folder
+* Source Code - in the code folder
+* [Compile](code/Readme.md)
 
 ## Platform
 

@@ -30,3 +30,24 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 * Launch XCode and load Pipeline.xcodeproj 
 * Build and run on iPhone Simulator or Device
 
+<img src=ShaderMuseCompile.jpg>
+
+### Notes
+
+For deployment to the App Store, the photo in Shader mode is downscale with the following:
+
+```
+
+let downsampledImage = ImageUtil.downsample(imageAt: filePath, to: UIScreen.main.bounds.size, 
+					scale: UIScreen.main.scale / appSettings.shaderDownScale)
+
+```
+
+Change **Common/AppSettings.shaderDownScale** to a smaller value to create a higher resolution video.
+
+### Creating your own Metal Shader and integrating it with the Pipeline.
+
+For creating your own Metal Shader and integrating it with the Pipeline, search for **FractalFlowNoiseFX.swift** in the source code. This a wrapper of the Metal Shader that integrates it to the Digital Compositing Pipeline.
+
+
+
