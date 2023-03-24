@@ -13,6 +13,8 @@ Pipeline
 3. FBM Noise - none
 4. Difference Blend Mode - 3,"2"
 
+Note - The number after the "-" refers to the input node (image). 
+
 <img src=LakePipeline.jpg width="30%" height="30%">  
 
 [Pipeline File](Lake.json) - See the section below on how to import this file into the app.
@@ -29,6 +31,8 @@ Pipeline
 4. Particles - 3
 5. Difference Blend Mode - 4, "0"
 
+Note - The values after the ":" refers to the node parameters. 
+
 #### Comic Puzzle
 <img src=ComicPuzzle.gif width="30%" height="30%">  
 
@@ -41,6 +45,8 @@ Pipeline
 4. Comic Effect - 3
 5. Sinusoidal Gradient - none
 5. Mix - 5, "4"
+
+Note - Why do some input nodes have "" (double quotes) while some do not? 
 
 #### Gradient Flow
 <img src=GradientFlow.gif width="30%" height="30%"> 
