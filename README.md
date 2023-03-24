@@ -130,7 +130,7 @@ We use different Radius values in the two Gaussian Blur to vary the output of ou
      CIBlendWithMask 
      
      
-The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoise as the background image, and the output of CIColorDodgeBlend (DoG) as the mask.
+The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoise as the background image, and the output of CIColorDodgeBlend (DoG sketch) as the mask.
 
 <img src=documentation/MalaccaFireComposited.JPG width="50%" height="50%">
           
