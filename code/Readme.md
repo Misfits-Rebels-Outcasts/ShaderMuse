@@ -30,3 +30,5 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 * Launch XCode and load Pipeline.xcodeproj 
 * Build and run on iPhone Simulator or Device
 
+<img src=ShaderMuseCompile.jpg>
+
