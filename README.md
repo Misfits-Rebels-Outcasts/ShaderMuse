@@ -230,7 +230,7 @@ and over 150 CIFilter for Digital Compositing. Please star our project, we will 
 
 # Epilogue
 
-After the plague, "quando nella egregia città di Fiorenza, oltre a ogn'altra italica bellissima, pervenne la mortifera pestilenza" (Decameron), while traveling, in the beautiful far east town of Malacca, a fire occured, and both the town and skyline in front of our window was ablazed with a red orange color. 
+After the plague, "quando nella egregia città di Fiorenza, oltre a ogn'altra italica bellissima, pervenne la mortifera pestilenza" (Decameron), while traveling, in the beautiful far east town of Malacca, a fire occurred, and both the town and skyline in front of our window was ablaze with a red orange color. 
 
 Memento Mori, Memento Vivere.
 
