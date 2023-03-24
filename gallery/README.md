@@ -44,9 +44,13 @@ Pipeline
 3. Crystallize - 2 : Radius - 36
 4. Comic Effect - 3
 5. Sinusoidal Gradient - none
-5. Mix - 5, "4"
+6. Mix - 5, "4"
 
 Note - Why do some input nodes have "" (double quotes) while some do not? 
+
+In my own simple words: The one with double quotes is one we specified specifically. The one without double quotes is automatically using the previous node.
+
+Checkout the detailed explanation in Nodef on [Auto Chaining](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/AutoChaining.md) and [Reverse Compositing](https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/ReverseCompositing.md).
 
 #### Gradient Flow
 <img src=GradientFlow.gif width="30%" height="30%"> 
