@@ -32,3 +32,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 <img src=ShaderMuseCompile.jpg>
 
+### Notes
+
+For deployment to the App Store, the photo in Shader mode is downscale with the following:
+
+```
+let downsampledImage = ImageUtil.downsample(imageAt: filePath, to: UIScreen.main.bounds.size, 
+					scale: UIScreen.main.scale / appSettings.shaderDownScale)
+```
+
+Change shaderDownScale to a smaller value to create a higher resolution video.
+
