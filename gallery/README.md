@@ -1,6 +1,6 @@
 #  Shaders Gallery - Testing In Progress
 
-If you have design a Digital Composited Shader, please feel free to it here.
+Please feel free to share your pipeline design here.
 
 #### Lake Noise
 <img src=Lake.gif width="30%" height="30%">  
