@@ -50,6 +50,13 @@ Pipeline
 #### Sinusoidal Noise
 <img src=SinusoidalNoise.gif width="30%" height="30%"> 
 
+Pipeline
+
+0. Sunflower Image
+1. Sinusoidal Gradient - none
+2. FBM Noise - none
+4. Subtract Blend Mode - 2,"1"
+
 ### How to load the pipeline document in this gallery?
 
 The pipeline json file is available in this gallery folder.
