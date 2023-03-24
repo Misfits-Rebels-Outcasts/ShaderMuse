@@ -15,7 +15,7 @@ Pipeline
 
 <img src=LakePipeline.jpg width="30%" height="30%">  
 
-[Pipeline File](Lake.json)
+[Pipeline File](Lake.json) - See section below on loading this file.
 
 #### Artsy Flower
 <img src=ArtsyFlower.gif width="30%" height="30%"> 
@@ -31,6 +31,16 @@ Pipeline
 
 #### Comic Puzzle
 <img src=ComicPuzzle.gif width="30%" height="30%">  
+
+Pipeline
+
+0. Sunflower Image
+1. Color Controls - 0
+2. FBM Noise - none
+3. Crystallize - 2 : Radius: 36
+4. Comic Effect - 3
+5. Sinusoidal Gradient - none
+5. Mix - 5, "4"
 
 #### Gradient Flow
 <img src=GradientFlow.gif width="30%" height="30%"> 
