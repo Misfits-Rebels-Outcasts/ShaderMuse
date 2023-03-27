@@ -1,6 +1,6 @@
 #  Shaders Gallery - Testing In Progress
 
-Please feel free to share your pipeline design here.
+Please feel free to share your pipeline design here. If you need an overview of what a Digital Compositing Pipeline is, check out the [TLDR section here](https://github.com/Misfits-Rebels-Outcasts/Nodef).
 
 #### Lake Noise
 <img src=Lake.gif width="30%" height="30%">  
@@ -56,24 +56,25 @@ Checkout the detailed explanation in Nodef on [Auto Chaining](https://github.com
 <img src=GradientFlow.gif width="30%" height="30%"> 
 
 0. Sunflower Image
-1. Color Controls - 0
-2. FBM Noise - none
-3. Gaussian Gradient - none : Radius - 605
-4. Color Dodge Blend Mode - 3,"2"
-5. Color Dodge Blend Mode - 4,"0"
-6. Color Invert - 5
+1. Color Controls (0)
+2. FBM Noise
+3. Gaussian Gradient : Radius - 605
+4. Color Dodge Blend Mode (3,"2")
+5. Color Dodge Blend Mode (4,"0")
+6. Color Invert (5)
 
 #### Arty Metal
+
 <img src=ArtyMetal.gif width="30%" height="30%"> 
 
 Pipeline
 
 0. Sunflower Image
-1. Color Controls - 0
-2. Pointillize - 1 : Radius - 20
-3. FBM Noise - none
-4. Darken Blend Mode - 3, "2"
-5. Difference Blend Mode - 4, "0"
+1. Color Controls (0)
+2. Pointillize (1) : Radius - 20
+3. FBM Noise
+4. Darken Blend Mode (3,"2")
+5. Difference Blend Mode (4,"0")
 
 #### Sinusoidal Noise
 <img src=SinusoidalNoise.gif width="30%" height="30%"> 
@@ -81,9 +82,9 @@ Pipeline
 Pipeline
 
 0. Sunflower Image
-1. Sinusoidal Gradient - none
-2. FBM Noise - none
-4. Subtract Blend Mode - 2,"1"
+1. Sinusoidal Gradient
+2. FBM Noise
+4. Subtract Blend Mode (2,"1")
 
 ### How to load the pipeline document in this gallery?
 
