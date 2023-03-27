@@ -1,6 +1,6 @@
 #  Shaders Gallery - Testing In Progress
 
-Please feel free to share your pipeline design here. If you need an overview of what a Digital Compositing Pipeline is, check out the [TLDR section here](https://github.com/Misfits-Rebels-Outcasts/Nodef).
+Please feel free to share your pipeline design here. If you need get a quick overview of the grammar of a Pipeline used below, check out the [TLDR section of Open Digital Compositing Pipline here](https://github.com/Misfits-Rebels-Outcasts/Nodef).
 
 #### Lake Noise
 <img src=Lake.gif width="30%" height="30%">  
