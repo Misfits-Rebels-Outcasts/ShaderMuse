@@ -4,17 +4,17 @@ Shader Muse explores the fun from Mixing, Chaining, and Digital Compositing Phot
 
 For example, we explore the fun of mixing this Image 
 
-<img src=documentation/Malacca.JPG width="50%" height="50%">
+<img src=documentation/Malacca.JPG width="70%" height="70%">
 
 with this Shader (Fractal Flow Noise)
 
-<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
+<img src=documentation/FractalFlowNoise.JPG width="70%" height="70%">
 
 to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effects Video</a> (mp4 video).
 <!--
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
 -->
-<img src=documentation/MalaccaFire.gif width="50%" height="50%">
+<img src=documentation/MalaccaFire.gif width="70%" height="70%">
 
 #### [Shader Gallery](gallery/README.md) (coming soon)
 
