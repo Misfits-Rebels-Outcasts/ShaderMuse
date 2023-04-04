@@ -25,7 +25,7 @@ Pipeline
 0. Sunflower Image
 1. Color Controls (0)
 2. FBM Noise
-2. Kaleidoscope (2) : Count - 15, Angle - 143
+2. Kaleidoscope (2) : Count = 15, Angle = 143
 4. Particles - (3)
 5. Difference Blend Mode (4,"0")
 
@@ -39,7 +39,7 @@ Pipeline
 0. Sunflower Image
 1. Color Controls (0)
 2. FBM Noise
-3. Crystallize (2) : Radius - 36
+3. Crystallize (2) : Radius = 36
 4. Comic Effect (3)
 5. Sinusoidal Gradient - none
 6. Mix (5,"4")
@@ -56,7 +56,7 @@ Checkout the detailed explanation in Nodef on [Auto Chaining](https://github.com
 0. Sunflower Image
 1. Color Controls (0)
 2. FBM Noise
-3. Gaussian Gradient : Radius - 605
+3. Gaussian Gradient : Radius = 605
 4. Color Dodge Blend Mode (3,"2")
 5. Color Dodge Blend Mode (4,"0")
 6. Color Invert (5)
@@ -69,7 +69,7 @@ Pipeline
 
 0. Sunflower Image
 1. Color Controls (0)
-2. Pointillize (1) : Radius - 20
+2. Pointillize (1) : Radius = 20
 3. FBM Noise
 4. Darken Blend Mode (3,"2")
 5. Difference Blend Mode (4,"0")
