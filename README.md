@@ -4,17 +4,17 @@ Shader Muse explores the fun from Mixing, Chaining, and Digital Compositing Phot
 
 For example, we explore the fun of mixing this Image 
 
-<img src=documentation/Malacca.JPG width="50%" height="50%">
+<img src=documentation/Malacca.JPG width="70%" height="70%">
 
 with this Shader (Fractal Flow Noise)
 
-<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
+<img src=documentation/FractalFlowNoise.JPG width="70%" height="70%">
 
 to get this <a href="documentation/FireShaderAndSmokeEffect.mp4">Photo Fire Effects Video</a> (mp4 video).
 <!--
 <img src=documentation/FireFlameShaderPhotoEffect.JPG width="50%" height="50%">
 -->
-<img src=documentation/MalaccaFire.gif width="50%" height="50%">
+<img src=documentation/MalaccaFire.gif width="70%" height="70%">
 
 #### [Shader Gallery](gallery/README.md) (coming soon)
 
@@ -42,7 +42,7 @@ In other words, a Shader is a set of computer instructions (computer program) th
 
 The Metal Shader we have developed for use in the Fire Effect is a Fractal Flow Noise Shader. This Shader is a fractal sum of a given base image. What this means is that it takes a basic image file, makes many copies of it, some zoomed, some rotated, and blends them together. The blending is not uniform, however. The images that are zoomed smaller (having a higher frequency) will be blended with a lighter weight.  
 
-<img src=documentation/FractalFlowNoise.JPG width="50%" height="50%">
+<img src=documentation/FractalFlowNoise.JPG width="70%" height="70%">
 
 We also animate each copy of the basic image so that they move independently from each other. Furthermore, the animation of the pixels in each copy is dependent on the location of the pixel. Some pixels will move / rotate / scale faster than other pixels. This complex combination gives rise to animation effects that can simulate some natural phenomenon such as flame and gas.
 
@@ -113,7 +113,7 @@ With the "fire" (Fractal Flow Noise Shader), we now need to make it occur natura
 
 This gives us a mask for our Fire Effect as shown below:
 
-<img src=documentation/GaussianDifferenceMask.JPG width="50%" height="50%">
+<img src=documentation/GaussianDifferenceMask.JPG width="70%" height="70%">
 
 We use different Radius values in the two Gaussian Blur to vary the output of our Color Dodge Blend. Below are some sample values.
 
@@ -132,7 +132,7 @@ We use different Radius values in the two Gaussian Blur to vary the output of ou
      
 The CIBlendWithMask uses the Original Image as the input image, CIFractalFlowNoise as the background image, and the output of CIColorDodgeBlend (DoG sketch) as the mask.
 
-<img src=documentation/MalaccaFireComposited.JPG width="50%" height="50%">
+<img src=documentation/MalaccaFireComposited.JPG width="70%" height="70%">
           
 ## Fire Shader Effect - Full Node Graph
 
