@@ -407,7 +407,6 @@
 		205CB6CB29C6893A0012A3CE /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205CB6C929C6893A0012A3CE /* SharedExtensions.swift */; };
 		205E6F2A28B03138006D5775 /* NodeLaunch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205E6F2928B03138006D5775 /* NodeLaunch Screen.storyboard */; };
 		205E6F2B28B03138006D5775 /* NodeLaunch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205E6F2928B03138006D5775 /* NodeLaunch Screen.storyboard */; };
-		205E6F2E28B04138006D5775 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205E6F2D28B04138006D5775 /* StoreKit.framework */; };
 		205E96272891FB7B00C5FED2 /* GlassDistortionFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E96262891FB7B00C5FED2 /* GlassDistortionFX.swift */; };
 		205E96282891FB7B00C5FED2 /* GlassDistortionFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E96262891FB7B00C5FED2 /* GlassDistortionFX.swift */; };
 		205E962A289229A500C5FED2 /* AreaAverageFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E9629289229A500C5FED2 /* AreaAverageFX.swift */; };
@@ -1387,7 +1386,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				205E6F2E28B04138006D5775 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
