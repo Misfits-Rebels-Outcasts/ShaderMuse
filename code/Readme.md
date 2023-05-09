@@ -21,7 +21,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 ### Prerequisites
 
-* XCode 14
+* Xcode 14
 * iOS 16
 
 ### Build
